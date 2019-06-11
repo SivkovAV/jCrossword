@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\common\test_utils\generators.cpp">
+      <Filter>Source Files\jcw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\crossword.cpp">
+      <Filter>Source Files\jcw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\game_cell.cpp">
+      <Filter>Source Files\jcw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\game_line.cpp">
+      <Filter>Source Files\jcw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\game.cpp">
+      <Filter>Source Files\jcw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\parametric_crossword.cpp">
+      <Filter>Source Files\jcw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\properties.cpp">
+      <Filter>Source Files\jcw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\task.cpp">
+      <Filter>Source Files\jcw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\task_cell.cpp">
+      <Filter>Source Files\jcw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\task_line.cpp">
+      <Filter>Source Files\jcw</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="jcwTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_jcwTest.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_jcwTest.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\color.cpp">
+      <Filter>Source Files\jcw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\colors_claster.cpp">
+      <Filter>Source Files\jcw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\colors_multiclaster.cpp">
+      <Filter>Source Files\jcw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\image.cpp">
+      <Filter>Source Files\jcw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\resolver\line_resolvers\resolver_all_painted.cpp">
+      <Filter>Source Files\jcw\resolvers\lineResolvers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\resolver\line_resolvers\resolver_cross_finder.cpp">
+      <Filter>Source Files\jcw\resolvers\lineResolvers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\resolver\line_resolvers\resolver_fill_not_painted.cpp">
+      <Filter>Source Files\jcw\resolvers\lineResolvers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\resolver\line_resolvers\resolver_first_left_figure.cpp">
+      <Filter>Source Files\jcw\resolvers\lineResolvers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\resolver\line_resolvers\resolver_no_tasks.cpp">
+      <Filter>Source Files\jcw\resolvers\lineResolvers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\resolver\line_resolvers\resolver_single_variant.cpp">
+      <Filter>Source Files\jcw\resolvers\lineResolvers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\resolver\line_resolvers\resolver_task_checked.cpp">
+      <Filter>Source Files\jcw\resolvers\lineResolvers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\color_item.cpp">
+      <Filter>Source Files\jcw</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\resolver\abstract_line_resolver.cpp">
+      <Filter>Source Files\jcw\resolvers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\painter.cpp">
+      <Filter>Source Files\jcw\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\common\palette.cpp">
+      <Filter>Source Files\jcw\gui</Filter>
+    </ClCompile>
+    <ClCompile Include="resolvers_tests.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\common\crossword.hpp">
+      <Filter>Header Files\jcw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\game.hpp">
+      <Filter>Header Files\jcw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\game_cell.hpp">
+      <Filter>Header Files\jcw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\game_line.hpp">
+      <Filter>Header Files\jcw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\test_utils\generators.hpp">
+      <Filter>Header Files\jcw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\lines_vector.hpp">
+      <Filter>Header Files\jcw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\task_line.hpp">
+      <Filter>Header Files\jcw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\parametric_crossword.hpp">
+      <Filter>Header Files\jcw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\properties.hpp">
+      <Filter>Header Files\jcw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\task.hpp">
+      <Filter>Header Files\jcw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\task_cell.hpp">
+      <Filter>Header Files\jcw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\color.hpp">
+      <Filter>Header Files\jcw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\colors_claster.hpp">
+      <Filter>Header Files\jcw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\colors_multiclaster.hpp">
+      <Filter>Header Files\jcw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\image.hpp">
+      <Filter>Header Files\jcw</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\resolver\abstract_line_resolver.hpp">
+      <Filter>Header Files\jcw\resolvers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\palette.hpp">
+      <Filter>Header Files\jcw\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\painter.hpp">
+      <Filter>Header Files\jcw\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\resolver\line_resolvers\all_line_resolvers.hpp">
+      <Filter>Header Files\jcw\resolvers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\color_item.hpp">
+      <Filter>Header Files\jcw</Filter>
+    </ClInclude>
+    <ClInclude Include="resolvers_tests.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{e0ce2014-7ca2-46f1-8218-3d51b02d8769}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\jcw">
+      <UniqueIdentifier>{45adc304-6505-474b-bcba-d67365f396c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{f57aebce-267f-49b6-b31f-b05788eb62ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\jcw">
+      <UniqueIdentifier>{5c600627-d2f7-4395-9fa4-7d18519a3b26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{6d926a7d-9fb0-4e6c-b810-c627b5c57834}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{97d1f336-fbca-4a94-9b23-43556aca2580}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{f67bc3cb-cac9-4073-bb79-f6a200bd1b95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\jcw\resolvers">
+      <UniqueIdentifier>{8380e62c-b6b1-480a-8ca7-bf7d08c83388}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\jcw\resolvers\lineResolvers">
+      <UniqueIdentifier>{a77e072f-a873-42cf-bee1-2dc687bdffba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\jcw\resolvers">
+      <UniqueIdentifier>{5066499e-57dc-46cc-82f5-b387c04d09fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\jcw\gui">
+      <UniqueIdentifier>{c357ba30-d0e7-4b94-b5de-0da276fdd84b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\jcw\gui">
+      <UniqueIdentifier>{d0a0e1b4-59b8-4645-9c58-f9c63f2593f7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="jcwTest.hpp">
+      <Filter>Header Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>
