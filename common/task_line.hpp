@@ -11,23 +11,23 @@ namespace jcw
 class TaskLine : public Line<TaskCell>
 {
 public:
-    TaskLine(size_t cellsСount = 0);
+    TaskLine(size_t cellsРЎount = 0);
     TaskLine::TaskLine(Line<TaskCell> &line);
 
     static TaskLine getTaskByGame(const GameLine &gameLine);
     bool isSolution(GameLine &gameLine) const;
     bool isResolved() const;
     bool isResolved(const GameLine &game) const;
-    // возвращает самое большое число задания в строке
+    // РІРѕР·РІСЂР°С‰Р°РµС‚ СЃР°РјРѕРµ Р±РѕР»СЊС€РѕРµ С‡РёСЃР»Рѕ Р·Р°РґР°РЅРёСЏ РІ СЃС‚СЂРѕРєРµ
     size_t maxValue() const;
-    // возвращает количество клеток, которые должны быть закрашены
+    // РІРѕР·РІСЂР°С‰Р°РµС‚ РєРѕР»РёС‡РµСЃС‚РІРѕ РєР»РµС‚РѕРє, РєРѕС‚РѕСЂС‹Рµ РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ Р·Р°РєСЂР°С€РµРЅС‹
     size_t paintedCellsCount() const;
-    // возвращает количество гарантированно пустых клеток
+    // РІРѕР·РІСЂР°С‰Р°РµС‚ РєРѕР»РёС‡РµСЃС‚РІРѕ РіР°СЂР°РЅС‚РёСЂРѕРІР°РЅРЅРѕ РїСѓСЃС‚С‹С… РєР»РµС‚РѕРє
     size_t emptyCellsCount() const;
-    // возвращает минимальное кол-во клеток, нужное для отрисовки задания
+    // РІРѕР·РІСЂР°С‰Р°РµС‚ РјРёРЅРёРјР°Р»СЊРЅРѕРµ РєРѕР»-РІРѕ РєР»РµС‚РѕРє, РЅСѓР¶РЅРѕРµ РґР»СЏ РѕС‚СЂРёСЃРѕРІРєРё Р·Р°РґР°РЅРёСЏ
     size_t minimumGameCellsCount() const;
-    // заполняет игровую линию решением, нарисованным максимально компактно;
-    // делает это, начиная слева с клетки № firstCellFromLeft
+    // Р·Р°РїРѕР»РЅСЏРµС‚ РёРіСЂРѕРІСѓСЋ Р»РёРЅРёСЋ СЂРµС€РµРЅРёРµРј, РЅР°СЂРёСЃРѕРІР°РЅРЅС‹Рј РјР°РєСЃРёРјР°Р»СЊРЅРѕ РєРѕРјРїР°РєС‚РЅРѕ;
+    // РґРµР»Р°РµС‚ СЌС‚Рѕ, РЅР°С‡РёРЅР°СЏ СЃР»РµРІР° СЃ РєР»РµС‚РєРё в„– firstCellFromLeft
     bool fillGameLine(GameLine &game, size_t firstCellFromLeft = 0);
     bool setChecked(bool isChecked);
     bool setChecked(size_t cellIndex, bool isChecked);

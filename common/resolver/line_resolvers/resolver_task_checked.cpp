@@ -10,7 +10,7 @@ ResolverAllTaskChecked::ResolverAllTaskChecked()
 
 std::string ResolverAllTaskChecked::description() const
 {
-    return "Если все задание помечено - отмечаем свободные клетки крестами";
+    return "Р•СЃР»Рё РІСЃРµ Р·Р°РґР°РЅРёРµ РїРѕРјРµС‡РµРЅРѕ - РѕС‚РјРµС‡Р°РµРј СЃРІРѕР±РѕРґРЅС‹Рµ РєР»РµС‚РєРё РєСЂРµСЃС‚Р°РјРё";
 }
 
 bool ResolverAllTaskChecked::isMonohromOnly() const

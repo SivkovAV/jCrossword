@@ -2,19 +2,19 @@
 
 // (c) Copyright Aleksey Sivkov 2017-2018
 
-// очень простые алгоритмы (для косметического дооформления решений)
+// РѕС‡РµРЅСЊ РїСЂРѕСЃС‚С‹Рµ Р°Р»РіРѕСЂРёС‚РјС‹ (РґР»СЏ РєРѕСЃРјРµС‚РёС‡РµСЃРєРѕРіРѕ РґРѕРѕС„РѕСЂРјР»РµРЅРёСЏ СЂРµС€РµРЅРёР№)
 #include <resolver_no_tasks.hpp>
 #include <resolver_task_checked.hpp>
 #include <resolver_all_painted.hpp>
 #include <resolver_single_variant.hpp>
 #include <resolver_fill_not_painted.hpp>
 
-// простые алгоритмы (простые решающие правила)
+// РїСЂРѕСЃС‚С‹Рµ Р°Р»РіРѕСЂРёС‚РјС‹ (РїСЂРѕСЃС‚С‹Рµ СЂРµС€Р°СЋС‰РёРµ РїСЂР°РІРёР»Р°)
 #include <resolver_first_left_figure.hpp>
 #include <resolver_cross_finder.hpp>
 
-// не протестировано, не классифицировано по сложности
-// не добавлено в git
+// РЅРµ РїСЂРѕС‚РµСЃС‚РёСЂРѕРІР°РЅРѕ, РЅРµ РєР»Р°СЃСЃРёС„РёС†РёСЂРѕРІР°РЅРѕ РїРѕ СЃР»РѕР¶РЅРѕСЃС‚Рё
+// РЅРµ РґРѕР±Р°РІР»РµРЅРѕ РІ git
 //#include <resolver_5.hpp>
 //#include <resolver_6.hpp>
 //#include <resolver_7.hpp>

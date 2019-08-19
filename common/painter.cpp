@@ -50,14 +50,14 @@ void drawTaskCells(QPainter &painter, const Palette &palette,
         const auto value =
             QString::fromStdString(std::to_string(task[i].value()));
 
-        // надпись
+        // РЅР°РґРїРёСЃСЊ
         const size_t xCell = xCellBegin + i * Painter::meanCellSize;
         const size_t yCell = yCellBegin + round(penWidth / 2.);
         const size_t x = isHorizontal ? xCell + 1 : yCell;
         const size_t y = isHorizontal ? yCell - 1 : xCell;
         painter.drawText(x, y, rectSideSize, rectSideSize, Qt::AlignCenter, value);
 
-        // крест (отметка о завершении отрисовки)
+        // РєСЂРµСЃС‚ (РѕС‚РјРµС‚РєР° Рѕ Р·Р°РІРµСЂС€РµРЅРёРё РѕС‚СЂРёСЃРѕРІРєРё)
         if (task[i].isChecked())
         {
             const size_t x = xCellBegin + i * Painter::meanCellSize;
@@ -83,14 +83,14 @@ void drawTaskCells(QPainter &painter, const Palette &palette,
         const auto value =
             QString::fromStdString(std::to_string(task[i].value()));
 
-        // надпись
+        // РЅР°РґРїРёСЃСЊ
         const size_t xCell = xCellBegin + i * Painter::meanCellSize;
         const size_t yCell = yCellBegin + round(penWidth / 2.);
         const size_t x = isHorizontal ? xCell + 1 : yCell;
         const size_t y = isHorizontal ? yCell - 1 : xCell;
         painter.drawText(x, y, rectSideSize, rectSideSize, Qt::AlignCenter, value);
 
-        // крест
+        // РєСЂРµСЃС‚
         if (task[i].isChecked())
         {
             const size_t x = xCellBegin + i * Painter::meanCellSize;
@@ -198,19 +198,19 @@ void drawGameLine(QImage &image, const Palette &palette,
     painter.setPen(QPen(QBrush(palette.lines), Painter::borderSize,
         Qt::PenStyle::SolidLine));
 
-    // общий фон
+    // РѕР±С‰РёР№ С„РѕРЅ
     drawBackground(painter, palette, game, task,
         isHorizontal, lineNumber, cellsOffset, isInverceBackground);
 
-    // клетки задания
+    // РєР»РµС‚РєРё Р·Р°РґР°РЅРёСЏ
     drawTaskCells(painter, palette, game, task,
         isHorizontal, lineNumber, cellsOffset, isInverceBackground);
 
-    // игровые клетки
+    // РёРіСЂРѕРІС‹Рµ РєР»РµС‚РєРё
     drawGameCells(painter, palette, game, task,
         isHorizontal, lineNumber, cellsOffset, isInverceBackground);
 
-    // разделительные линии
+    // СЂР°Р·РґРµР»РёС‚РµР»СЊРЅС‹Рµ Р»РёРЅРёРё
     drawLines(painter, palette, game, task,
         isHorizontal, lineNumber, cellsOffset, isInverceBackground);
 }
@@ -323,8 +323,8 @@ void Painter::draw(const Palette &palette, std::string filename)
     const size_t backgroundColorsCount = palette.back.size();
     const size_t mainColorsCount = palette.main.size();
     const size_t width = std::max(backgroundColorsCount, mainColorsCount);
-    // 2 строки, т.к. вторая строка вуализирует цвета фона пустых клеток;
-    // 6 столбцов, т.к. тест должен охватить оба варианта цвета фона;
+    // 2 СЃС‚СЂРѕРєРё, С‚.Рє. РІС‚РѕСЂР°СЏ СЃС‚СЂРѕРєР° РІСѓР°Р»РёР·РёСЂСѓРµС‚ С†РІРµС‚Р° С„РѕРЅР° РїСѓСЃС‚С‹С… РєР»РµС‚РѕРє;
+    // 6 СЃС‚РѕР»Р±С†РѕРІ, С‚.Рє. С‚РµСЃС‚ РґРѕР»Р¶РµРЅ РѕС…РІР°С‚РёС‚СЊ РѕР±Р° РІР°СЂРёР°РЅС‚Р° С†РІРµС‚Р° С„РѕРЅР°;
     Game game(2, std::max(6u, width ));
     for (size_t i = 0; i < palette.main.size(); i++)
     {

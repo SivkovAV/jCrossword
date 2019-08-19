@@ -5,8 +5,8 @@
 
 using namespace jcw;
 
-TaskLine::TaskLine(size_t cells—ount)
-    : Line(cells—ount)
+TaskLine::TaskLine(size_t cells–°ount)
+    : Line(cells–°ount)
 {
 }
 

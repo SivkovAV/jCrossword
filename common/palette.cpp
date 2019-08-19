@@ -5,7 +5,7 @@
 using namespace jcw;
 
 std::vector<QColor> mainColorsExample{
-    // todo пополнить набор до 10
+    // todo РїРѕРїРѕР»РЅРёС‚СЊ РЅР°Р±РѕСЂ РґРѕ 10
     QColor(0, 150, 255),
     QColor("lightGreen"),
     QColor("Red"),
@@ -25,8 +25,8 @@ void Palette::reset(size_t mainColorsCount)
     // "black" "gray" "blue" "lightGreen" "lightBlue");
 
     back.resize(2);
-    back[0] = QColor(255, 255, 255);    // основной цвет фона
-    back[1] = QColor(230, 230, 250);    // дополнительный цвет фона
+    back[0] = QColor(255, 255, 255);    // РѕСЃРЅРѕРІРЅРѕР№ С†РІРµС‚ С„РѕРЅР°
+    back[1] = QColor(230, 230, 250);    // РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹Р№ С†РІРµС‚ С„РѕРЅР°
 
     mainColorsCount = mainColorsCount < 1u ? 1u : mainColorsCount;
     main.resize(mainColorsCount);

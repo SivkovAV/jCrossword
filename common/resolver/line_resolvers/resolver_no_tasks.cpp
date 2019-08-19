@@ -10,7 +10,7 @@ ResolverNoTask::ResolverNoTask()
 
 std::string ResolverNoTask::description() const
 {
-    return "Если задание пустое (отсутствует) - помечает все клетки пустыми";
+    return "Р•СЃР»Рё Р·Р°РґР°РЅРёРµ РїСѓСЃС‚РѕРµ (РѕС‚СЃСѓС‚СЃС‚РІСѓРµС‚) - РїРѕРјРµС‡Р°РµС‚ РІСЃРµ РєР»РµС‚РєРё РїСѓСЃС‚С‹РјРё";
 }
 
 bool ResolverNoTask::isMonohromOnly() const
@@ -33,7 +33,7 @@ bool ResolverNoTask::process(GameLine &game, TaskLine &task) const
     bool result = false;
     const auto lineSize = game.size();
 
-    // если задание пустое
+    // РµСЃР»Рё Р·Р°РґР°РЅРёРµ РїСѓСЃС‚РѕРµ
     if (task.size() == 0)
     {
         if (game.setEmpty())

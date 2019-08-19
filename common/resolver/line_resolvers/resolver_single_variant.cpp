@@ -10,7 +10,7 @@ ResolverSingleVariant::ResolverSingleVariant()
 
 std::string ResolverSingleVariant::description() const
 {
-    return "Если задание занимает все имеющиеся клетки - заполняем линию";
+    return "Р•СЃР»Рё Р·Р°РґР°РЅРёРµ Р·Р°РЅРёРјР°РµС‚ РІСЃРµ РёРјРµСЋС‰РёРµСЃСЏ РєР»РµС‚РєРё - Р·Р°РїРѕР»РЅСЏРµРј Р»РёРЅРёСЋ";
 }
 
 bool ResolverSingleVariant::isMonohromOnly() const

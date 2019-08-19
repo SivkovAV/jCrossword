@@ -11,20 +11,20 @@ namespace jcw
 class GameLine : public Line<GameCell>
 {
 public:
-    GameLine(size_t cellsСount = 0);
+    GameLine(size_t cellsРЎount = 0);
     GameLine(Line<GameCell> line);
 
-    // следующие методы возвращают true, если хоть одна клетка изменилась
+    // СЃР»РµРґСѓСЋС‰РёРµ РјРµС‚РѕРґС‹ РІРѕР·РІСЂР°С‰Р°СЋС‚ true, РµСЃР»Рё С…РѕС‚СЊ РѕРґРЅР° РєР»РµС‚РєР° РёР·РјРµРЅРёР»Р°СЃСЊ
     bool setFree();
     bool setEmpty();
     bool setPainted(ColorIndex color);
 
-    // помечает все свободные клетки как пустые
+    // РїРѕРјРµС‡Р°РµС‚ РІСЃРµ СЃРІРѕР±РѕРґРЅС‹Рµ РєР»РµС‚РєРё РєР°Рє РїСѓСЃС‚С‹Рµ
     bool FreeToEmpty();
 
     size_t paintedCellsCount() const;
 
-    // возвращает количество цветов, встречающихся на игровой линии
+    // РІРѕР·РІСЂР°С‰Р°РµС‚ РєРѕР»РёС‡РµСЃС‚РІРѕ С†РІРµС‚РѕРІ, РІСЃС‚СЂРµС‡Р°СЋС‰РёС…СЃСЏ РЅР° РёРіСЂРѕРІРѕР№ Р»РёРЅРёРё
     size_t maxColorsCount() const;
 
     GameLine subLine(size_t beginCellIndex, size_t endCellIndex) const;

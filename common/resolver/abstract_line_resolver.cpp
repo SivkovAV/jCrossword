@@ -20,17 +20,17 @@ bool AbstractLineResolver::drawFigure(GameLine& game, TaskLine &task,
     }
     const auto taskColor = task[taskIndex].color();
 
-    // закраска фигуры по переданным размерам
+    // Р·Р°РєСЂР°СЃРєР° С„РёРіСѓСЂС‹ РїРѕ РїРµСЂРµРґР°РЅРЅС‹Рј СЂР°Р·РјРµСЂР°Рј
     if (drawFigureOnly(game, taskColor, leftGameIndex, rightGameIndex, taskIndex))
     {
         result = true;
     }
 
-    // ищем левую и правую границы обнаруженной части фигуры
+    // РёС‰РµРј Р»РµРІСѓСЋ Рё РїСЂР°РІСѓСЋ РіСЂР°РЅРёС†С‹ РѕР±РЅР°СЂСѓР¶РµРЅРЅРѕР№ С‡Р°СЃС‚Рё С„РёРіСѓСЂС‹
     size_t left = leftGameIndex, right = rightGameIndex;
     findFigureBorders(game, taskIndex, left, right, taskColor);
 
-    // если длина обнаруженной части совпадает с полным размером - нашли целую фигуру!
+    // РµСЃР»Рё РґР»РёРЅР° РѕР±РЅР°СЂСѓР¶РµРЅРЅРѕР№ С‡Р°СЃС‚Рё СЃРѕРІРїР°РґР°РµС‚ СЃ РїРѕР»РЅС‹Рј СЂР°Р·РјРµСЂРѕРј - РЅР°С€Р»Рё С†РµР»СѓСЋ С„РёРіСѓСЂСѓ!
     const size_t figureLength = right - left + 1u;
     if (figureLength == task[taskIndex].value() &&
         complateFigure(game, task, left, right, taskIndex))
@@ -41,11 +41,11 @@ bool AbstractLineResolver::drawFigure(GameLine& game, TaskLine &task,
     {
         if (right - left + 1 > task[taskIndex].value())
         {
-            throw "найдена фигура некорректного размера";
+            throw "РЅР°Р№РґРµРЅР° С„РёРіСѓСЂР° РЅРµРєРѕСЂСЂРµРєС‚РЅРѕРіРѕ СЂР°Р·РјРµСЂР°";
         }
         ColorIndex color;
-        // проверяем, не ограничена ли фигура слева и справа препятствием
-        // и не совпадает ли ее граница с текущими (защита от зацикливания)
+        // РїСЂРѕРІРµСЂСЏРµРј, РЅРµ РѕРіСЂР°РЅРёС‡РµРЅР° Р»Рё С„РёРіСѓСЂР° СЃР»РµРІР° Рё СЃРїСЂР°РІР° РїСЂРµРїСЏС‚СЃС‚РІРёРµРј
+        // Рё РЅРµ СЃРѕРІРїР°РґР°РµС‚ Р»Рё РµРµ РіСЂР°РЅРёС†Р° СЃ С‚РµРєСѓС‰РёРјРё (Р·Р°С‰РёС‚Р° РѕС‚ Р·Р°С†РёРєР»РёРІР°РЅРёСЏ)
         if (right + 1 < game.size() &&
             isBlockedCell(game, taskColor, right + 1) &&
             !(right + 1 - task[taskIndex].value() == leftGameIndex &&
@@ -180,12 +180,12 @@ bool AbstractLineResolver::complateFigure(GameLine &game, TaskLine &task,
 {
     const auto color = task[taskIndex].color();
 
-    // отмечаем факт того, что фигура найдена
+    // РѕС‚РјРµС‡Р°РµРј С„Р°РєС‚ С‚РѕРіРѕ, С‡С‚Рѕ С„РёРіСѓСЂР° РЅР°Р№РґРµРЅР°
     bool result = setTaskCellAsResolved(game, task, taskIndex);
 
-    // смотрим, если ли что левее; если есть - пытаемся отметить границу и
-    // запускаем алгоритмы решения для левой подстроки
-    // иначе заполняем все справа крестами
+    // СЃРјРѕС‚СЂРёРј, РµСЃР»Рё Р»Рё С‡С‚Рѕ Р»РµРІРµРµ; РµСЃР»Рё РµСЃС‚СЊ - РїС‹С‚Р°РµРјСЃСЏ РѕС‚РјРµС‚РёС‚СЊ РіСЂР°РЅРёС†Сѓ Рё
+    // Р·Р°РїСѓСЃРєР°РµРј Р°Р»РіРѕСЂРёС‚РјС‹ СЂРµС€РµРЅРёСЏ РґР»СЏ Р»РµРІРѕР№ РїРѕРґСЃС‚СЂРѕРєРё
+    // РёРЅР°С‡Рµ Р·Р°РїРѕР»РЅСЏРµРј РІСЃРµ СЃРїСЂР°РІР° РєСЂРµСЃС‚Р°РјРё
     if (taskIndex == 0)
     {
         if (fillLeftSizeCellsAsEmpty(game, left))
@@ -195,12 +195,12 @@ bool AbstractLineResolver::complateFigure(GameLine &game, TaskLine &task,
     }
     else
     {
-        // отмечаем границу
+        // РѕС‚РјРµС‡Р°РµРј РіСЂР°РЅРёС†Сѓ
         if (task[taskIndex - 1].color() == color && game[left - 1].setEmpty())
         {
             result = true;
         }
-        // запуск решения для левой подзадачи
+        // Р·Р°РїСѓСЃРє СЂРµС€РµРЅРёСЏ РґР»СЏ Р»РµРІРѕР№ РїРѕРґР·Р°РґР°С‡Рё
         while (left >= 1 && game[left - 1].isEmpty())
         {
             left--;
@@ -214,20 +214,20 @@ bool AbstractLineResolver::complateFigure(GameLine &game, TaskLine &task,
         }
     }
 
-    // смотрим, если ли что правее; если нет - пытаемся отметить границу и
-    // запускаем алгоритмы решения для правой подстроки
+    // СЃРјРѕС‚СЂРёРј, РµСЃР»Рё Р»Рё С‡С‚Рѕ РїСЂР°РІРµРµ; РµСЃР»Рё РЅРµС‚ - РїС‹С‚Р°РµРјСЃСЏ РѕС‚РјРµС‚РёС‚СЊ РіСЂР°РЅРёС†Сѓ Рё
+    // Р·Р°РїСѓСЃРєР°РµРј Р°Р»РіРѕСЂРёС‚РјС‹ СЂРµС€РµРЅРёСЏ РґР»СЏ РїСЂР°РІРѕР№ РїРѕРґСЃС‚СЂРѕРєРё
     if (taskIndex == task.size() - 1 && fillRightSizeCellsAsEmpty(game, right))
     {
         result = true;
     }
     else
     {
-        // отмечаем границу
+        // РѕС‚РјРµС‡Р°РµРј РіСЂР°РЅРёС†Сѓ
         if (task[taskIndex + 1].color() == color && game[right + 1].setEmpty())
         {
             result = true;
         }
-        // запуск решения для правой подзадачи
+        // Р·Р°РїСѓСЃРє СЂРµС€РµРЅРёСЏ РґР»СЏ РїСЂР°РІРѕР№ РїРѕРґР·Р°РґР°С‡Рё
         while (right + 1 < game.size() && game[right + 1].isEmpty())
         {
             right++;

@@ -12,7 +12,7 @@ ResolverCrossFinder::ResolverCrossFinder(
 
 std::string ResolverCrossFinder::description() const
 {
-    return "закрашивание областей, гарантированно занятых фигурами task[i]";
+    return "Р·Р°РєСЂР°С€РёРІР°РЅРёРµ РѕР±Р»Р°СЃС‚РµР№, РіР°СЂР°РЅС‚РёСЂРѕРІР°РЅРЅРѕ Р·Р°РЅСЏС‚С‹С… С„РёРіСѓСЂР°РјРё task[i]";
 }
 
 bool ResolverCrossFinder::isMonohromOnly() const
@@ -37,7 +37,7 @@ bool ResolverCrossFinder::process(GameLine &game, TaskLine &task) const
     std::vector<size_t> lastIndex(taskSize);
     std::vector<size_t> firstIndex(taskSize);
 
-    // ищем "самые правые" границы для всех фигур задания
+    // РёС‰РµРј "СЃР°РјС‹Рµ РїСЂР°РІС‹Рµ" РіСЂР°РЅРёС†С‹ РґР»СЏ РІСЃРµС… С„РёРіСѓСЂ Р·Р°РґР°РЅРёСЏ
     size_t beginPos = 0;
     for (size_t i = 0; i < taskSize; ++i)
     {
@@ -75,7 +75,7 @@ bool ResolverCrossFinder::process(GameLine &game, TaskLine &task) const
         }
     }
 
-    // ищем "самые левые" границы для всех фигур задания
+    // РёС‰РµРј "СЃР°РјС‹Рµ Р»РµРІС‹Рµ" РіСЂР°РЅРёС†С‹ РґР»СЏ РІСЃРµС… С„РёРіСѓСЂ Р·Р°РґР°РЅРёСЏ
     int64_t endPos = gameSize - 1;
     for (size_t i = taskSize - 1; i != UINT_FAST32_MAX; --i)
     {
@@ -112,7 +112,7 @@ bool ResolverCrossFinder::process(GameLine &game, TaskLine &task) const
         }
     }
 
-    // закрашиваем пересечения, если таковые имеются
+    // Р·Р°РєСЂР°С€РёРІР°РµРј РїРµСЂРµСЃРµС‡РµРЅРёСЏ, РµСЃР»Рё С‚Р°РєРѕРІС‹Рµ РёРјРµСЋС‚СЃСЏ
     auto result = false;
     for (size_t i = 0; i < taskSize; ++i)
     {
