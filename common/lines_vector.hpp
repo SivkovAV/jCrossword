@@ -2,8 +2,8 @@
 
 // (c)Copyright Aleksey Sivkov 2019
 /*
-    Класс Агрегатора строк (игра или задание).
-От него унаследованы классы Game и Task.
+    В Р»Р°СЃСЃ СРіСЂРµРіР°С‚РѕСЂР° СЃС‚СЂРѕРє (РёРіСЂР° РёР»Рё Р·Р°РґР°РЅРёРµ).
+СњС‚ РЅРµРіРѕ СѓРЅР°СЃР»РµРґРѕРІР°РЅС‹ РєР»Р°СЃСЃС‹ Game Рё Task.
 */
 
 
@@ -21,8 +21,8 @@ public:
     LinesVector(const std::vector<LineType> &taskLines);
 
     size_t maxColorsCount() const;
-    void inversion();      // развотот по первой оси (для Game - по вертикали)
-    void innerInversion(); // развотот по второй оси (для Game - по горизонтали)
+    void inversion();      // СЂР°Р·РІРѕС‚РѕС‚ РїРѕ РїРµСЂРІРѕР№ РѕСЃРё (РґР»В¤ Game - РїРѕ РІРµСЂС‚РёРєР°Р»Рё)
+    void innerInversion(); // СЂР°Р·РІРѕС‚РѕС‚ РїРѕ РІС‚РѕСЂРѕР№ РѕСЃРё (РґР»В¤ Game - РїРѕ РіРѕСЂРёР·РѕРЅС‚Р°Р»Рё)
 };
 
 template <typename LineType>

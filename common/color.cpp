@@ -133,8 +133,8 @@ double Color::lenght(const Color &dotColor1, const Color &dotColor2,
     auto rLength = ColorItem::lenght(dotColor1.red_, dotColor2.red_);
     auto gLength = ColorItem::lenght(dotColor1.green_, dotColor2.green_);
     auto bLength = ColorItem::lenght(dotColor1.blue_, dotColor2.blue_);
-    // учитываем различную важность цветовых составляющих
-    // с точки зрения человеческого восприятия
+    // СѓС‡РёС‚С‹РІР°РµРј СЂР°Р·Р»РёС‡РЅСѓСЋ РІР°Р¶РЅРѕСЃС‚СЊ С†РІРµС‚РѕРІС‹С… СЃРѕСЃС‚Р°РІР»СЏСЋС‰РёС…
+    // СЃ С‚РѕС‡РєРё Р·СЂРµРЅРёСЏ С‡РµР»РѕРІРµС‡РµСЃРєРѕРіРѕ РІРѕСЃРїСЂРёСЏС‚РёСЏ
     if (useHumanFactor)
     {
         rLength *= 0.3;

@@ -4,7 +4,7 @@
 
 using namespace jcw;
 
-// коэффициенты важности оттенков цветов для челосека (наука)
+// РєРѕСЌС„С„РёС†РёРµРЅС‚С‹ РІР°Р¶РЅРѕСЃС‚Рё РѕС‚С‚РµРЅРєРѕРІ С†РІРµС‚РѕРІ РґР»СЏ С‡РµР»РѕСЃРµРєР° (РЅР°СѓРєР°)
 static auto humanColorFactorForRed = 0.3;
 static auto humanColorFactorForGreen = 0.59;
 static auto humanColorFactorForBlue = 0.11;
@@ -98,7 +98,7 @@ unsigned Image::dotAARRGGBB(size_t x, size_t y) const
 
 void Image::resize(size_t height, size_t width)
 {
-    // если изображение пустое - создаем его; если height==0 или width==0 - обнуление и завершение метода
+    // РµСЃР»Рё РёР·РѕР±СЂР°Р¶РµРЅРёРµ РїСѓСЃС‚РѕРµ - СЃРѕР·РґР°РµРј РµРіРѕ; РµСЃР»Рё height==0 РёР»Рё width==0 - РѕР±РЅСѓР»РµРЅРёРµ Рё Р·Р°РІРµСЂС€РµРЅРёРµ РјРµС‚РѕРґР°
     if (dots_.size() == 0)
     {
         dots_.resize(height);
@@ -123,7 +123,7 @@ void Image::resize(size_t height, size_t width)
         return;
     }
 
-    // если изображение имеет строки неравной длины - выравниваем их по первой строке
+    // РµСЃР»Рё РёР·РѕР±СЂР°Р¶РµРЅРёРµ РёРјРµРµС‚ СЃС‚СЂРѕРєРё РЅРµСЂР°РІРЅРѕР№ РґР»РёРЅС‹ - РІС‹СЂР°РІРЅРёРІР°РµРј РёС… РїРѕ РїРµСЂРІРѕР№ СЃС‚СЂРѕРєРµ
     unsigned firstLineWidth = dots_[0].size();
     for (auto &dotLine : dots_)
     {
@@ -164,7 +164,7 @@ void Image::resize(size_t height, size_t width)
 
 void Image::decreaseSize(unsigned kTimes)
 {
-    // если изображение пустое - создаем его; если height==0 или width==0 - обнуление и завершение метода
+    // РµСЃР»Рё РёР·РѕР±СЂР°Р¶РµРЅРёРµ РїСѓСЃС‚РѕРµ - СЃРѕР·РґР°РµРј РµРіРѕ; РµСЃР»Рё height==0 РёР»Рё width==0 - РѕР±РЅСѓР»РµРЅРёРµ Рё Р·Р°РІРµСЂС€РµРЅРёРµ РјРµС‚РѕРґР°
     if (kTimes < 1 || dots_.size() == 0)
     {
         return;
@@ -177,7 +177,7 @@ void Image::decreaseSize(unsigned kTimes)
         }
     }
 
-    // если изображение имеет строки неравной длины - выравниваем их по первой строке
+    // РµСЃР»Рё РёР·РѕР±СЂР°Р¶РµРЅРёРµ РёРјРµРµС‚ СЃС‚СЂРѕРєРё РЅРµСЂР°РІРЅРѕР№ РґР»РёРЅС‹ - РІС‹СЂР°РІРЅРёРІР°РµРј РёС… РїРѕ РїРµСЂРІРѕР№ СЃС‚СЂРѕРєРµ
     unsigned firstLineWidth = dots_[0].size();
     for (auto &dotLine : dots_)
     {
@@ -266,7 +266,7 @@ void Image::transformToGrey()
 
 void Image::trimBorders(double percentValue)
 {
-    // trim по вертикали
+    // trim РїРѕ РІРµСЂС‚РёРєР°Р»Рё
     const auto height = static_cast<double>(dots_.size());
     const auto verticalTrimSizeDouble = round(height * percentValue);
     if (height - 2 * verticalTrimSizeDouble <= 0.)
@@ -277,7 +277,7 @@ void Image::trimBorders(double percentValue)
     dots_.erase(dots_.begin(), dots_.begin() + verticalTrimSize);
     dots_.erase(dots_.end() - verticalTrimSize, dots_.end());
 
-    // trim по горизонтали
+    // trim РїРѕ РіРѕСЂРёР·РѕРЅС‚Р°Р»Рё
     const auto width = static_cast<double>(dots_[0].size());
     const auto horizontalTrimSizeDouble = round(width * percentValue);
     if (width - 2 * horizontalTrimSizeDouble <= 0.)
@@ -422,10 +422,10 @@ std::vector<std::vector<Image::ImageElement>> Image::getElements(
         {
             result[i].push_back({ static_cast<unsigned>(j), 1 });
         }
-        //if (i < newSize - 1)    // теоретически это условие лишнее; практически из-за неточности вычислений в формате double это позволяет отфильтровать попадание невалидных индексов в массив result
+        //if (i < newSize - 1)    // С‚РµРѕСЂРµС‚РёС‡РµСЃРєРё СЌС‚Рѕ СѓСЃР»РѕРІРёРµ Р»РёС€РЅРµРµ; РїСЂР°РєС‚РёС‡РµСЃРєРё РёР·-Р·Р° РЅРµС‚РѕС‡РЅРѕСЃС‚Рё РІС‹С‡РёСЃР»РµРЅРёР№ РІ С„РѕСЂРјР°С‚Рµ double СЌС‚Рѕ РїРѕР·РІРѕР»СЏРµС‚ РѕС‚С„РёР»СЊС‚СЂРѕРІР°С‚СЊ РїРѕРїР°РґР°РЅРёРµ РЅРµРІР°Р»РёРґРЅС‹С… РёРЅРґРµРєСЃРѕРІ РІ РјР°СЃСЃРёРІ result
         {
             k = (1.0 * oldSize / newSize) * (i + 1) - (unsigned)((1.0 * oldSize / newSize) * (i + 1));
-            if (k > 0.00001)    // теоретически достаточно сравнить с нулем; практически из-за неточности вычислений в формате double это позволяет отфильтровать попадание невалидных индексов в массив result
+            if (k > 0.00001)    // С‚РµРѕСЂРµС‚РёС‡РµСЃРєРё РґРѕСЃС‚Р°С‚РѕС‡РЅРѕ СЃСЂР°РІРЅРёС‚СЊ СЃ РЅСѓР»РµРј; РїСЂР°РєС‚РёС‡РµСЃРєРё РёР·-Р·Р° РЅРµС‚РѕС‡РЅРѕСЃС‚Рё РІС‹С‡РёСЃР»РµРЅРёР№ РІ С„РѕСЂРјР°С‚Рµ double СЌС‚Рѕ РїРѕР·РІРѕР»СЏРµС‚ РѕС‚С„РёР»СЊС‚СЂРѕРІР°С‚СЊ РїРѕРїР°РґР°РЅРёРµ РЅРµРІР°Р»РёРґРЅС‹С… РёРЅРґРµРєСЃРѕРІ РІ РјР°СЃСЃРёРІ result
             {
                 const auto oldSize_ = static_cast<double>(oldSize);
                 const auto newSize_ = static_cast<double>(newSize);

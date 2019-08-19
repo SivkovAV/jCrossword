@@ -23,11 +23,11 @@ public:
     bool operator==(const ColorItem &jceColor) const;
     void operator*=(double k);
 
-    // расчет среднего значения; realCount не обязательно равен dotColors.size() !!!
+    // СЂР°СЃС‡РµС‚ СЃСЂРµРґРЅРµРіРѕ Р·РЅР°С‡РµРЅРёСЏ; realCount РЅРµ РѕР±СЏР·Р°С‚РµР»СЊРЅРѕ СЂР°РІРµРЅ dotColors.size() !!!
     static ColorItem mean(const std::vector<ColorItem> &jceColors, double realCount);
-    // расчет среднего значения для двух цветов
+    // СЂР°СЃС‡РµС‚ СЃСЂРµРґРЅРµРіРѕ Р·РЅР°С‡РµРЅРёСЏ РґР»СЏ РґРІСѓС… С†РІРµС‚РѕРІ
     static ColorItem mean(const ColorItem &jceColor1, const ColorItem &jceColor2);
-    // расчет расстояния
+    // СЂР°СЃС‡РµС‚ СЂР°СЃСЃС‚РѕСЏРЅРёСЏ
     static double lenght(const ColorItem &jceColor1, const ColorItem &jceColor2);
 
 private:

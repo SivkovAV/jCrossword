@@ -160,7 +160,7 @@ void JCWTest::taskLineTest() const
     taskLine3.clear();
     QCOMPARE(taskLine1 == taskLine3, true);
 
-    // подготовка игровой строки вида X_#___XX_X_
+    // РїРѕРґРіРѕС‚РѕРІРєР° РёРіСЂРѕРІРѕР№ СЃС‚СЂРѕРєРё РІРёРґР° X_#___XX_X_
     GameLine gameLine(10);
     gameLine[0].setPainted(ColorIndex());
     gameLine[2].setPainted((ColorIndex)1);
@@ -554,7 +554,7 @@ void JCWTest::parametricCrosswordTest() const
     QCOMPARE(crossword.width(), (size_t)(1.5 * 2 * width));
 }
 
-// генератор таблицы задания в виде "гребенки"
+// РіРµРЅРµСЂР°С‚РѕСЂ С‚Р°Р±Р»РёС†С‹ Р·Р°РґР°РЅРёСЏ РІ РІРёРґРµ "РіСЂРµР±РµРЅРєРё"
 Task generateTask(size_t size, size_t innerSize)
 {
     Task task(size);
@@ -651,9 +651,9 @@ void JCWTest::dotColorTest() const
     QCOMPARE(dotColor.getG(), dotColor3.getG() + dotColor2.getG());
     QCOMPARE(dotColor.getB(), dotColor3.getB() + dotColor2.getB());
 
-    std::vector<Color> сolors = { Color(), Color(9.0, 9.0, 9.0), Color()};
-    QCOMPARE(Color::mean(сolors, 3), Color(3.0, 3.0, 3.0));
-    QCOMPARE(Color::mean(сolors, 2), Color(4.5, 4.5, 4.5));
+    std::vector<Color> СЃolors = { Color(), Color(9.0, 9.0, 9.0), Color()};
+    QCOMPARE(Color::mean(СЃolors, 3), Color(3.0, 3.0, 3.0));
+    QCOMPARE(Color::mean(СЃolors, 2), Color(4.5, 4.5, 4.5));
     QCOMPARE(Color::mean(Color(1, 1, 1), Color(3, 3, 3)), Color(2, 2, 2));
     QCOMPARE(Color::lenght(Color(1, 1, 1), Color(3, 3, 3)), sqrt(12));
 }
@@ -766,22 +766,22 @@ void JCWTest::image() const
 
 void JCWTest::colorMulticlasterTest() const
 {
-    // изображение с 4 явно выраженными группами точек
+    // РёР·РѕР±СЂР°Р¶РµРЅРёРµ СЃ 4 СЏРІРЅРѕ РІС‹СЂР°Р¶РµРЅРЅС‹РјРё РіСЂСѓРїРїР°РјРё С‚РѕС‡РµРє
     Image image(3u, 3u);
-    // кластер 1
+    // РєР»Р°СЃС‚РµСЂ 1
     image.setDot(0, 0, 50,  51,  58);
     image.setDot(1, 0, 49,  50,  50);
     image.setDot(2, 0, 51,  49,  52);
-    // кластер 2
+    // РєР»Р°СЃС‚РµСЂ 2
     image.setDot(0, 1, 200, 200, 200);
     image.setDot(1, 1, 200, 200, 200);
     image.setDot(2, 1, 200, 200, 200);
-    // кластер 3
+    // РєР»Р°СЃС‚РµСЂ 3
     image.setDot(0, 2, 255, 255, 255);
     image.setDot(1, 2, 255, 255, 255);
-    // кластер 4
+    // РєР»Р°СЃС‚РµСЂ 4
     image.setDot(2, 2, 0, 0, 0);
-    // мультикластер на 3 кластера
+    // РјСѓР»СЊС‚РёРєР»Р°СЃС‚РµСЂ РЅР° 3 РєР»Р°СЃС‚РµСЂР°
     ColorsMultiClaster multiClaster = ColorsMultiClaster({
         ColorsClaster(Color(50,  50,  50)),
         ColorsClaster(Color(200, 200, 200)),
@@ -858,17 +858,17 @@ void JCWTest::lineResolversTest() const
     QCOMPARE(testResolverAllPainted(), true);
     QCOMPARE(testResolverFillNotPainted(), true);
     QCOMPARE(testResolverCrossFinder(), true);
-    // todo: сделать тесты для всех алгоритмов
+    // todo: СЃРґРµР»Р°С‚СЊ С‚РµСЃС‚С‹ РґР»СЏ РІСЃРµС… Р°Р»РіРѕСЂРёС‚РјРѕРІ
 }
 
-// todo: нужно реализовать побайтовое сравнение сформированных 
-// png-файлов с эталонами; эталоны залить в git
+// todo: РЅСѓР¶РЅРѕ СЂРµР°Р»РёР·РѕРІР°С‚СЊ РїРѕР±Р°Р№С‚РѕРІРѕРµ СЃСЂР°РІРЅРµРЅРёРµ СЃС„РѕСЂРјРёСЂРѕРІР°РЅРЅС‹С… 
+// png-С„Р°Р№Р»РѕРІ СЃ СЌС‚Р°Р»РѕРЅР°РјРё; СЌС‚Р°Р»РѕРЅС‹ Р·Р°Р»РёС‚СЊ РІ git
 void JCWTest::painterTest() const
 {
     const QString exeFilePath = QApplication::applicationDirPath();
     const std::string dirname = exeFilePath.toStdString() + "/";
 
-    // тест отрисовки линии игры и линии задания различной длины
+    // С‚РµСЃС‚ РѕС‚СЂРёСЃРѕРІРєРё Р»РёРЅРёРё РёРіСЂС‹ Рё Р»РёРЅРёРё Р·Р°РґР°РЅРёСЏ СЂР°Р·Р»РёС‡РЅРѕР№ РґР»РёРЅС‹
     for (size_t taskCellsCount : {0, 1, 5, 6})
     {
         for (size_t gameCellsCount : {0, 1, 5, 6})
@@ -883,7 +883,7 @@ void JCWTest::painterTest() const
         }
     }
 
-    // тест отрисовки игр различного размера
+    // С‚РµСЃС‚ РѕС‚СЂРёСЃРѕРІРєРё РёРіСЂ СЂР°Р·Р»РёС‡РЅРѕРіРѕ СЂР°Р·РјРµСЂР°
     const auto taskSizeVariants = {0u, 1u, 5u,  6u};
     const auto gameSizeVariants = {0u, 1u, 10u, 11u};
     for (size_t topTaskSize : taskSizeVariants)
@@ -909,8 +909,8 @@ void JCWTest::painterTest() const
         }
     }
 
-    // тест отрисовки реального кроссворда, его транспонированной копии
-    // и отдельной его строки исходного кроссворда
+    // С‚РµСЃС‚ РѕС‚СЂРёСЃРѕРІРєРё СЂРµР°Р»СЊРЅРѕРіРѕ РєСЂРѕСЃСЃРІРѕСЂРґР°, РµРіРѕ С‚СЂР°РЅСЃРїРѕРЅРёСЂРѕРІР°РЅРЅРѕР№ РєРѕРїРёРё
+    // Рё РѕС‚РґРµР»СЊРЅРѕР№ РµРіРѕ СЃС‚СЂРѕРєРё РёСЃС…РѕРґРЅРѕРіРѕ РєСЂРѕСЃСЃРІРѕСЂРґР°
     Crossword testCrossword = TestGenegator::testCrossword();
     Painter::draw(testCrossword, dirname + "test_crossword.png");
 

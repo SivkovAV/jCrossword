@@ -2,19 +2,19 @@
 
 // (c) Copyright Aleksey Sivkov 2017
 /*
-    Класс реализует объект клетки игрового поля.
+    В Р»Р°СЃСЃ СЂРµР°Р»РёР·СѓРµС‚ РѕР±СЉРµРєС‚ РєР»РµС‚РєРё РёРіСЂРѕРІРѕРіРѕ РїРѕР»В¤.
 */
 
 #include <color_index.hpp>
 
 namespace jcw
 {
-// состояние клетки
+// СЃРѕСЃС‚РѕВ¤РЅРёРµ РєР»РµС‚РєРё
 enum GameCellStatus
 {
-    empty,    // клетка помечена, как пустая (X)
-    painted,  // клетка закрашена
-    free,     // клетка свободна (не empty и не painted)
+    empty,    // РєР»РµС‚РєР° РїРѕРјРµС‡РµРЅР°, РєР°Рє РїСѓСЃС‚Р°В¤ (X)
+    painted,  // РєР»РµС‚РєР° Р·Р°РєСЂР°С€РµРЅР°
+    free,     // РєР»РµС‚РєР° СЃРІРѕР±РѕРґРЅР° (РЅРµ empty Рё РЅРµ painted)
 };
 
 class GameCell
@@ -27,7 +27,7 @@ public:
     bool isEmpty() const;
     bool isEqual(const GameCell &cell) const;
      
-    // следующие методы возвращают признак - изменилась ли клетка
+    // СЃР»РµРґСѓСЋС‰РёРµ РјРµС‚РѕРґС‹ РІРѕР·РІСЂР°С‰Р°СЋС‚ РїСЂРёР·РЅР°Рє - РёР·РјРµРЅРёР»Р°СЃСЊ Р»Рё РєР»РµС‚РєР°
     bool setFree();                                                            
     bool setEmpty(bool noThrow = false);                                    
     bool setPainted(ColorIndex color = ColorIndex(), bool noThrow = false);

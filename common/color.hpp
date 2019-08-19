@@ -27,9 +27,9 @@ public:
     Color operator+(Color &dotColor);
     void operator+=(Color &dotColor);
 
-    // расчет среднего значения; realCount не обязательно равен dotColors.size() !!!
+    // СЂР°СЃС‡РµС‚ СЃСЂРµРґРЅРµРіРѕ Р·РЅР°С‡РµРЅРёСЏ; realCount РЅРµ РѕР±СЏР·Р°С‚РµР»СЊРЅРѕ СЂР°РІРµРЅ dotColors.size() !!!
     static Color mean(const std::vector<Color> &dotColors, double realCount);
-    // расчет среднего значения двух точек
+    // СЂР°СЃС‡РµС‚ СЃСЂРµРґРЅРµРіРѕ Р·РЅР°С‡РµРЅРёСЏ РґРІСѓС… С‚РѕС‡РµРє
     static Color mean(const Color &dotColor1, const Color &dotColor2);
     static double lenght(const Color &dotColor1, const Color &dotColor2,
         bool useHumanFactor = false);

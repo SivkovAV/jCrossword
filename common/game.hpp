@@ -20,7 +20,7 @@ public:
     void setEmpty();
     void setFree();
     Game getTransposed() const;
-    void transpose();              // транспонирование
+    void transpose();              // С‚СЂР°РЅСЃРїРѕРЅРёСЂРѕРІР°РЅРёРµ
     Game subGame(size_t left, size_t right, size_t top, size_t bottom) const;
 };
 

@@ -17,12 +17,12 @@ public:
     static std::string toString(QColor color);
     static QColor fromString(std::string string);
 
-    std::vector<QColor> back; // цвета фона
-    std::vector<QColor> main; // цвета закрашенных клеток
-    QColor gameBack;          // цвет фона кроссворда
-    QColor taskBack;          // цвет фона в клетках задания
-    QColor taskText;          // цвет текста в клетках задания
-    QColor lines;             // цвета линий
+    std::vector<QColor> back; // С†РІРµС‚Р° С„РѕРЅР°
+    std::vector<QColor> main; // С†РІРµС‚Р° Р·Р°РєСЂР°С€РµРЅРЅС‹С… РєР»РµС‚РѕРє
+    QColor gameBack;          // С†РІРµС‚ С„РѕРЅР° РєСЂРѕСЃСЃРІРѕСЂРґР°
+    QColor taskBack;          // С†РІРµС‚ С„РѕРЅР° РІ РєР»РµС‚РєР°С… Р·Р°РґР°РЅРёСЏ
+    QColor taskText;          // С†РІРµС‚ С‚РµРєСЃС‚Р° РІ РєР»РµС‚РєР°С… Р·Р°РґР°РЅРёСЏ
+    QColor lines;             // С†РІРµС‚Р° Р»РёРЅРёР№
 };
 
 } // namespace jcw

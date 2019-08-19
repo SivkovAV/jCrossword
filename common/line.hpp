@@ -12,17 +12,17 @@ template <typename CellType>
 class Line
 {
 public:
-    Line(size_t cellsСount = 0);
+    Line(size_t cellsРЎount = 0);
     CellType& operator[](size_t cellIndex);
     CellType operator[](size_t cellIndex) const;
     bool operator==(const Line &line) const;
     bool operator!=(const Line &line) const;
     void clear();
     void resize(unsigned newSize);
-    void addCells(size_t cellsСount = 1);   // добавляет клетки в конец 
-    void addCell(CellType cell);            // добавляет клетку в конец 
+    void addCells(size_t cellsРЎount = 1);   // РґРѕР±Р°РІР»СЏРµС‚ РєР»РµС‚РєРё РІ РєРѕРЅРµС† 
+    void addCell(CellType cell);            // РґРѕР±Р°РІР»СЏРµС‚ РєР»РµС‚РєСѓ РІ РєРѕРЅРµС† 
     size_t size() const;                    
-    void inversion();                       // разворачивает линию
+    void inversion();                       // СЂР°Р·РІРѕСЂР°С‡РёРІР°РµС‚ Р»РёРЅРёСЋ
     Line subLine(size_t beginCellIndex, size_t endCellIndex) const;
     void mergeLine(Line subline, size_t beginCellIndex, size_t endCellIndex);
 
@@ -31,9 +31,9 @@ protected:
 };
 
 template <typename CellType>
-Line<CellType>::Line(size_t cellsСount)
+Line<CellType>::Line(size_t cellsРЎount)
 {
-    addCells(cellsСount);
+    addCells(cellsРЎount);
 }
 
 template <typename CellType>
@@ -95,11 +95,11 @@ void Line<CellType>::resize(unsigned newSize)
 }
 
 template <typename CellType>
-void Line<CellType>::addCells(size_t cellsСount)
+void Line<CellType>::addCells(size_t cellsРЎount)
 {
     CellType cell;
-    cells_.reserve(cellsСount);
-    for (size_t i = 0; i < cellsСount; i++)
+    cells_.reserve(cellsРЎount);
+    for (size_t i = 0; i < cellsРЎount; i++)
     {
         cells_.emplace_back(cell);
     }

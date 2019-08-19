@@ -22,21 +22,21 @@ public:
     Color color(size_t x, size_t y) const;
     unsigned dotAARRGGBB(size_t x, size_t y) const;
 
-    // изменение размера с пересчетом цвета каждой новой клетки
+    // РёР·РјРµРЅРµРЅРёРµ СЂР°Р·РјРµСЂР° СЃ РїРµСЂРµСЃС‡РµС‚РѕРј С†РІРµС‚Р° РєР°Р¶РґРѕР№ РЅРѕРІРѕР№ РєР»РµС‚РєРё
     void resize(size_t height, size_t width);
-    // уменьшение размера изображения в kTimes раз
+    // СѓРјРµРЅСЊС€РµРЅРёРµ СЂР°Р·РјРµСЂР° РёР·РѕР±СЂР°Р¶РµРЅРёВ¤ РІ kTimes СЂР°Р·
     void decreaseSize(unsigned kTimes);
-    // увеличивает кол-во пикселов в times раз
+    // СѓРІРµР»РёС‡РёРІР°РµС‚ РєРѕР»-РІРѕ РїРёРєСЃРµР»РѕРІ РІ times СЂР°Р·
     void increasePixelsByDot(size_t times = 20);
-    // преобразование изображение к черно-белому 
+    // РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ РёР·РѕР±СЂР°Р¶РµРЅРёРµ Рє С‡РµСЂРЅРѕ-Р±РµР»РѕРјСѓ 
     void transformToGrey();
-    // обрезает percentValue-процентов картинки по краям
+    // РѕР±СЂРµР·Р°РµС‚ percentValue-РїСЂРѕС†РµРЅС‚РѕРІ РєР°СЂС‚РёРЅРєРё РїРѕ РєСЂР°В¤Рј
     void trimBorders(double percentValue);
-    // обрезка удаление одноцветной границы (ищется цвет точки dots_[0][0])
+    // РѕР±СЂРµР·РєР° СѓРґР°Р»РµРЅРёРµ РѕРґРЅРѕС†РІРµС‚РЅРѕР№ РіСЂР°РЅРёС†С‹ (РёС‰РµС‚СЃВ¤ С†РІРµС‚ С‚РѕС‡РєРё dots_[0][0])
     void trimMonohromeLines();      
 
-    // проверка отсутствия слишком больших или
-    // слишком малых значений цвета во всех точках
+    // РїСЂРѕРІРµСЂРєР° РѕС‚СЃСѓС‚СЃС‚РІРёВ¤ СЃР»РёС€РєРѕРј Р±РѕР»СЊС€РёС… РёР»Рё
+    // СЃР»РёС€РєРѕРј РјР°Р»С‹С… Р·РЅР°С‡РµРЅРёР№ С†РІРµС‚Р° РІРѕ РІСЃРµС… С‚РѕС‡РєР°С…
     bool isValideColors();
 
     Image copy_(size_t leftTopX, size_t leftTopy, size_t width, size_t height);
@@ -53,7 +53,7 @@ private:
     std::vector <std::vector<ImageElement>> getElements(
         size_t oldSize, size_t newSize);
 
-    std::vector<std::vector<Color>> dots_; // [высота][ширина]
+    std::vector<std::vector<Color>> dots_; // [РІС‹СЃРѕС‚Р°][С€РёСЂРёРЅР°]
 };
 
 } // namespace jcw

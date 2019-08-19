@@ -5,8 +5,8 @@
 
 using namespace jcw;
 
-GameLine::GameLine(size_t cells—ount)
-    : Line(cells—ount)
+GameLine::GameLine(size_t cells–°ount)
+    : Line(cells–°ount)
 {
 }
 

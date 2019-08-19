@@ -16,7 +16,7 @@ Task::Task(const std::vector<TaskLine> &taskLines)
 
 bool Task::isEqual(const Task &task) const
 {
-    // аналог operator==, но без учета isChecked
+    // Р°РЅР°Р»РѕРі operator==, РЅРѕ Р±РµР· СѓС‡РµС‚Р° isChecked
     const auto size = this->size();
     if (task.size() != size)
     {

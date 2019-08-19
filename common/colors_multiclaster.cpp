@@ -133,7 +133,7 @@ void ColorsMultiClaster::recalculateImage(Image &image, bool useFloidStainberg)
 
 void ColorsMultiClaster::addImageDots(const Image &image)
 {
-    // значение, заведомо большее максимально возможного расстояния между цветами
+    // Р·РЅР°С‡РµРЅРёРµ, Р·Р°РІРµРґРѕРјРѕ Р±РѕР»СЊС€РµРµ РјР°РєСЃРёРјР°Р»СЊРЅРѕ РІРѕР·РјРѕР¶РЅРѕРіРѕ СЂР°СЃСЃС‚РѕСЏРЅРёСЏ РјРµР¶РґСѓ С†РІРµС‚Р°РјРё
     const double maxColorLength = 256.0 * sqrt(3.0) + 1;
     const size_t height = image.height();
     const size_t width = image.width();
@@ -196,7 +196,7 @@ void ColorsMultiClaster::setMostFarDotAsClasterCenter(ColorsClaster& dotClaster)
     {
         return;
     }
-    // size_t - номер кластера, int - номер его наиболее удаленной от центра точки
+    // size_t - РЅРѕРјРµСЂ РєР»Р°СЃС‚РµСЂР°, int - РЅРѕРјРµСЂ РµРіРѕ РЅР°РёР±РѕР»РµРµ СѓРґР°Р»РµРЅРЅРѕР№ РѕС‚ С†РµРЅС‚СЂР° С‚РѕС‡РєРё
     std::map<size_t, int> farDots;
     const auto clasterCount = this->size();
     for (size_t i = 0; i < clasterCount; ++i)
@@ -247,7 +247,7 @@ ColorsMultiClaster ColorsMultiClaster::createMultiClaster(
     }
     ColorsMultiClaster clasters(colorsCount);
 
-    // предварительное размещение точек по кластерам
+    // РїСЂРµРґРІР°СЂРёС‚РµР»СЊРЅРѕРµ СЂР°Р·РјРµС‰РµРЅРёРµ С‚РѕС‡РµРє РїРѕ РєР»Р°СЃС‚РµСЂР°Рј
     for (size_t y = 0; y < height; ++y)
     {
         for (size_t x = 0; x < width; ++x)
@@ -268,8 +268,8 @@ ColorsMultiClaster ColorsMultiClaster::createMultiClaster(
     double midLenght = 0, midLenghtPrew = 1;
     while (midLenght < midLenghtPrew)
     {
-        // переразмещение пустых кластеров : если кластер пуст - размещаем
-        // его центр в точке, наиболее удаленной от центра своего кластера
+        // РїРµСЂРµСЂР°Р·РјРµС‰РµРЅРёРµ РїСѓСЃС‚С‹С… РєР»Р°СЃС‚РµСЂРѕРІ : РµСЃР»Рё РєР»Р°СЃС‚РµСЂ РїСѓСЃС‚ - СЂР°Р·РјРµС‰Р°РµРј
+        // РµРіРѕ С†РµРЅС‚СЂ РІ С‚РѕС‡РєРµ, РЅР°РёР±РѕР»РµРµ СѓРґР°Р»РµРЅРЅРѕР№ РѕС‚ С†РµРЅС‚СЂР° СЃРІРѕРµРіРѕ РєР»Р°СЃС‚РµСЂР°
         for (auto it = clasters.begin(); it != clasters.end(); ++it)
         {
             if (it->dotsCount() == 0)

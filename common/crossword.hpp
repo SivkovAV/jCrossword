@@ -32,9 +32,9 @@ public:
     bool hasNoTaskConflict() const;
     size_t maxColorsCount() const;
     
-    size_t maxTaskValue() const; // получение самого большого значения задания
-    size_t width() const;        // длина кроссворда в клетках
-    size_t height() const;       // высота кроссворда в клетках
+    size_t maxTaskValue() const; // РїРѕР»СѓС‡РµРЅРёРµ СЃР°РјРѕРіРѕ Р±РѕР»СЊС€РѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ Р·Р°РґР°РЅРёСЏ
+    size_t width() const;        // РґР»РёРЅР° РєСЂРѕСЃСЃРІРѕСЂРґР° РІ РєР»РµС‚РєР°С…
+    size_t height() const;       // РІС‹СЃРѕС‚Р° РєСЂРѕСЃСЃРІРѕСЂРґР° РІ РєР»РµС‚РєР°С…
     void setEmpty();
     bool setEmpty(size_t row, size_t column, bool noThrow = false);
     bool setFree(size_t row, size_t column);
@@ -48,7 +48,7 @@ public:
     void setTasksAsChecked(bool isChecked);
 
 protected:
-    // game - набор игровых строк (game_[i] - это строка, а не столбец) 
+    // game - РЅР°Р±РѕСЂ РёРіСЂРѕРІС‹С… СЃС‚СЂРѕРє (game_[i] - СЌС‚Рѕ СЃС‚СЂРѕРєР°, Р° РЅРµ СЃС‚РѕР»Р±РµС†) 
     Game game_;
     Task leftTask_;
     Task topTask_;
